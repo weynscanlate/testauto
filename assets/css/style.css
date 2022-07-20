@@ -1,0 +1,683 @@
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit}
+
+.wrapper{
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto';
+}
+
+.content{
+    flex: 1 1 auto;
+}
+
+.block_cont{
+    margin: 50px 0px;
+}
+
+.header{
+    color: black;
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    top: 0;
+    right: 0;
+}
+
+.header_bg{
+    background-color: #00000087;
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.logo{
+    width: 80px;
+    overflow: hidden;
+
+}
+
+.logo a{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.menu{
+    display: flex;
+}
+
+.menu-item{
+    padding: 30px 20px;
+}
+
+.menu-item a{
+    display: block;
+    font-size: 18px;
+    color: white;
+}
+
+.menu-item a:hover{
+    opacity: 0.5;
+}
+
+/* шапка */
+
+.block_tm{
+    margin: 110px 0px 50px 0;
+}
+
+.baner{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.baner_item{
+    position: relative;
+    z-index: 1;
+}
+
+.baner_item_img1{
+    background: url("../img/1block.jpg") 0 0/cover no-repeat fixed;
+    height: 100%;
+    width: 100%;
+}
+
+.baner_item_img2{
+    background: url("../img/2block.jpg") 0 0/cover no-repeat fixed;
+    height: 100%;
+    width: 100%;
+}
+
+.baner_item_img3{
+    background: url("../img/3block.jpg") 0 0/cover no-repeat fixed;
+    height: 100%;
+    width: 100%;
+}
+
+.baner_item_img4{
+    background: url("../img/car.png") 0 0/cover no-repeat fixed;
+    height: 100%;
+    width: 100%;
+}
+
+.baner_item .baner_black{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.4;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+.baner_item_text{
+    position: absolute;
+    bottom: 100px;
+    color: white;
+    width: 100%;
+    padding: 0px 25px;
+}
+
+.h2_title{
+    font-size: 30px;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+.baner_item_text p{
+    font-size: 18px;
+    margin-top: 20px;
+    opacity: 0;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+.baner_item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.baner_item_link:hover .baner_black{
+    opacity: 0.75;
+}
+
+.baner_item_link:hover .h2_title{
+    margin-bottom: 80px;
+    color: red;
+}
+
+.baner_item_link:hover .baner_item_text p{
+    opacity: 1;
+}
+
+/* особенности */
+
+.features_list{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 280px);
+    gap: 25px;
+}
+
+.list_item{
+    position: relative;
+    outline: 2px solid rgba(0, 0, 0, 0.2);
+    display: flex;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 25px;
+}
+
+.list_item img{
+    width: 60px;
+    height: 60px;
+    margin: 30px 0px;
+}
+
+.list_item h3{
+    font-size: 16px;
+    text-align: center;
+    line-height: 24px;
+    color: #353a3ecc;
+    text-transform: uppercase;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+.list_item_bg{
+    height: 0px;
+    width: 0px;
+    background-color: red;
+    border-radius: 100%;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.list_item_bg>img{
+    opacity: 0;
+    position: relative;
+    bottom: 120px;
+    transition: 0.7s 0.4s;
+    -webkit-transition: 0.7s 0.4s;
+    -moz-transition: 0.7s 0.4s;
+    -ms-transition: 0.7s 0.4s;
+    -o-transition: 0.7s 0.4s;
+}
+
+.list_item_bg p{
+    font-size: 14px;
+    padding: 10px 20px;
+    line-height: 20px;
+    text-align: center;
+    margin-top: 10px;
+    opacity: 0;
+    transition: 0.7s 0.4s;
+    -webkit-transition: 0.7s 0.4s;
+    -moz-transition: 0.7s 0.4s;
+    -ms-transition: 0.7s 0.4s;
+    -o-transition: 0.7s 0.4s;
+}
+
+.list_item:hover .list_item_bg{
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.list_item:hover h3{
+    opacity: 0;
+}
+
+.list_item:hover p, .list_item:hover .list_item_bg>img{
+    opacity: 1;
+    bottom: 0px;
+}
+
+.list_item:hover p, .list_item:hover .list_item_bg>img{
+    opacity: 1;
+    bottom: 0px;
+}
+
+/* диагностика */
+
+.diagnostic{
+    margin: 40px 0px;
+}
+
+.diagnostic_items{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.diagnostic_item{
+    background-color: rgba(233, 233, 233, 0.501);
+    height: 150px;
+    padding: 0px 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+.diagnostic_item_cont{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 100%;
+}
+
+.diagnostic_item_text{
+    display: flex;
+    align-items: center;
+}
+
+.h3_title{
+    font-size: 18px;
+    transition: 0.1s;
+    -webkit-transition: 0.1s;
+    -moz-transition: 0.1s;
+    -ms-transition: 0.1s;
+    -o-transition: 0.1s;
+}
+
+.diagnostic_item_image{
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.diagnostic_item_image img{
+    width: 70%;
+    object-fit: cover;
+}
+
+.btn_position{
+    display: flex;
+    align-items: center;
+}
+
+.diagnostic_item_btn{
+    opacity: 0;
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    padding: 18px 55px;
+    right: 50px;
+    border: 2px solid white;
+    color: white;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+.diagnostic_item_btn:hover{
+    color:black;
+    background-color: white;
+}
+
+.diagnostic_item:hover{
+    background-color: black;
+    color: white;
+}
+
+.diagnostic_item:hover .diagnostic_item_btn{
+    opacity: 1;
+}
+
+/* банер между блоками */
+
+.baner_halfs{
+    width: 100%;
+    height: 400px;
+    background: url("https://6auto.ru/uploads/posts/2021-02/1613997191_1920x1280_675419_www_artfile_ru.jpg") 50%/cover no-repeat fixed;
+}
+
+.baner_halfs150{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 250px;
+    background: url("https://6auto.ru/uploads/posts/2021-02/1613997191_1920x1280_675419_www_artfile_ru.jpg") 50% 100%/cover no-repeat fixed;
+}
+
+.baner_half_black{
+    position: absolute;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.baner_halfs150 .h2_title{
+    position: relative;
+    top: 25px;
+    z-index: 3;
+    font-size: 28px;
+    color: white;
+    text-align: center;
+}
+
+.baner_half360{
+    height: 360px;
+    position: relative;
+    z-index: 1;
+    background: url("https://6auto.ru/uploads/posts/2021-02/1613997191_1920x1280_675419_www_artfile_ru.jpg") 50% 100%/cover no-repeat fixed;
+}
+
+/* ремонт */
+
+.block_mt{
+    margin: 110px 0px;
+}
+
+.repair{
+    display: flex;
+    gap: 30px;
+}
+
+.repair_block_cont{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.repair_image{
+    width: 100%;
+    height: 100%;
+}
+
+.repair_image img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.repair_block_items{
+    display: flex;
+    flex-direction: column;
+}
+
+.repair_block_item{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.repair_h3_title{
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 18px;
+}
+
+.advantages{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 20px;
+    grid-template-rows: 600px;
+    margin-top: 50px;
+}
+
+.advantages_item{
+    position: relative;
+}
+
+.advantages_item img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.3;
+    position: relative;
+    z-index: 2;
+}
+
+.advantages_black_box{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+}
+
+.advantages_check{
+    position: absolute;
+    top: 0;
+    padding: 35px 35px;
+    height: 100%;
+    width: 100%;
+    z-index: 4;
+}
+
+.advantages_check h4{
+    font-size: 45px;
+    color: white;
+    line-height: 45px;
+    text-transform: uppercase;
+}
+
+.advantages_check h4 span{
+    font-size: 35px;
+    color: white;
+}
+
+.advantages_check h4 i{
+    color: red;
+    display: block;
+    margin-bottom: 20px;
+    display: inline;
+}
+
+.advantages_check_items{
+    margin-top: 40px;
+}
+
+.advantages_check_item{
+    color: white;
+    padding: 20px 0px;
+    border-top: 2px solid white;
+    font-size: 18px;
+}
+
+.advantages_button{
+    position: absolute;
+    z-index: 4;
+    bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.advantages_button h4{
+    font-size: 20px;
+    margin-bottom: -15px;
+}
+
+.advantages_button button{
+    width: 150px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    border: 2px solid white;
+}
+
+.padding_right{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: end;
+}
+
+.padding_right p{
+    font-size: 18px;
+}
+
+.padding_right h4{
+    color: black;
+}
+
+.advantages_button_right button{
+    width: 150px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0);
+    color: black;
+    border: 2px solid black;
+}
+
+.features_wraper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 150px;
+}
+
+.features_item{
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.features_item span{
+    font-size: 30px;
+}
+
+.features_item_block{
+    display: flex;
+    justify-content: space-between;
+}
+
+.features_item_block p{
+    max-width: 50%;
+}
+
+.features_item_block img{
+    width: 55px;
+    height: 55px;
+}
+
+.features_item_color1{
+    background-color: #535760;;
+}
+
+.features_item_color2{
+    background-color: #31343a;
+}
+
+.features_item_color3{
+    background-color: #191b20;
+}
+
